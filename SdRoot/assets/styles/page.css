@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* Globals */
+#mainwrapper header {
+	background-color: rgba(208,207,207,1.00);
+	overflow: auto;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+#mainwrapper header #logo {
+	padding-left: 2%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: rgba(146,146,146,1.00);
+    text-align: center;
+}
+#content button {
+    font-size: 150%;
+    border-radius: 10px;
+    background-color: rgba(80,225,255,1.00);
+    width: 25%;
+}
+#mainContent {
+	padding-left: 2%;
+	width: 100%;
+	float: left;
+	padding-right: 2%;
+	padding-top: 41px;
+}
+#content #mainContent h1 {
+    font-family: sans-serif;
+    text-align: center;
+	color: rgba(146,146,146,1.00);
+}
+#content #mainContent p {
+	color: rgba(146,146,146,1.00);
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	text-align: center;
+}
+#content #mainContent .imgbox {
+    font-weight:400;
+	display: grid;
+	height: 100%;
+}
+#content #mainContent .center-fit {
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+#content #terms h1 {
+    font-family: sans-serif;
+	font-size: 1.5em;
+    text-align: left;
+	color: rgba(146,146,146,1.00);
+}
+#content #terms h2 {
+    font-family: sans-serif;
+	font-size: 1.0em;
+    text-align: left;
+	color: rgba(146,146,146,1.00);
+}
+#content #terms p {
+	color: rgba(146,146,146,1.00);
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	text-align: left;
+}
+footer {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+footer article {
+	width: 100%;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-align: center;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	color: rgba(146,146,146,1.00);
+}
+#footerbar {
+	height: 18px;
+	clear: both;
+	background-color: rgba(208,207,207,1.00);
+	width: 100%;
+}
+
+/* Tablet view */
+@media screen and (max-width:769px) {
+#mainContent {
+	padding-top: 0px;
+	float: none;
+	width: 96%;
+}
+footer {
+	/* Footer region */
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+#content footer article {
+	/*Each footer article */
+	width: 100%;
+}
+}
+
+/* Mobile view */
+@media screen and (max-width:480px) {
+#mainwrapper header #logo {
+	width: 96%;
+	margin-left: 2%;
+}
+#content footer article {
+	/* Each foter article */
+	width: 100%;
+}
+}

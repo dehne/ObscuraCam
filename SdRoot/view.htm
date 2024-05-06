@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ObscuraCam Photo View</title>
+<link href="assets/styles/page.css" rel="stylesheet" type="text/css">
+<script>
+  // <Body> onload handler: Use "image=<path>" in query string to set the src for the img tag "photo"
+  function setPhotoURL() {
+    searchParms = new URLSearchParams(document.location.search);
+    filePath = searchParms.get("image");
+    if (filePath == null) {
+      console.log("Couldn't find image query string parameter.");
+      console.log("Number of args is ", searchParms.length);
+      filePath = "";
+    }
+    if (filePath.length > 0) {
+      document.getElementById("photo").setAttribute("src", filePath);
+      return;
+    }
+    document.getElementById("photo").setAttribute("alt", "Bad query string");
+  }
+
+  // onclick handler to switch to "snap" to snap a photo
+  function toSnap() {
+    window.location.href = "snap";
+  }
+</script>
+</head>
+
+<body onload="setPhotoURL()">
+<div id="mainwrapper">
+  <header> 
+    <div id="logo">
+        <img src="assets/images/PTCO_small.png" alt="ObscuraCam Logo" onClick="toSnap()">
+        <p>Port Townsend's Mobile Camera Obscura</p>
+  </div>
+  </header>
+  <div id="content">
+    <section id="mainContent"> 
+      <h1>Your Photo</h1>
+      <div class="imgbox">
+        <img class="center-fit" id="photo" src="assets/images/PTCO.png" alt="ObscuraCam photo" onClick="toSnap()" />
+      </div>
+      <p><button autofocus onclick="toSnap()">Take Another Photo</button></p>
+    </section>
+    <footer> 
+      <article>
+        <p><b>The Raw Art Collective</b> - <span>therawartcollective@gmail.com</span></p>
+        <p><b>Copyright &copy; 2024</b> - <span>License: GNU Lesser General Public License v2.1</span></p>
+      </article>
+    </footer>
+  </div>
+  <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+</div>
+</body>
+</html>

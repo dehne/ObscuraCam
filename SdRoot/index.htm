@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ObscuraCam Home Page</title>
+<link href="assets/styles/index.css" rel="stylesheet" type="text/css">
+<script>
+  function toSnap() {
+    window.location.href = "snap";
+  }
+</script>
+</head>
+
+<body>
+<header>
+  <div class="profileLogo"> 
+    <p><img src="assets/images/PTCO.png" alt="PTCO logo" onClick="toSnap()" /></p>
+  </div>
+  <section class="profileHeader">
+    <h1>Port Townsend's Mobile Camera Obscura</h1>
+    <hr>
+  </section>
+</header>
+<!-- content -->
+<section class="mainContent"> 
+  <p>Click the button to take a photo of what the camera obscura sees:</p>
+  <p><button autofocus onclick="toSnap()">Take Photo!</button></p>
+</section>
+<footer>
+  <hr>
+  <p class="footerNote">Copyright &copy; 2024 <span>- License: GNU Lesser General Public License v2.1</span></p>
+  <p class="footerNote">The Raw Art Collective <span>- therawartcollective@gmail.com</span></p>
+  <p class="footerNote"><span><a href="terms.htm">Terms and Conditions of Use</a></span></p>
+</footer>
+</body>
+</html>
